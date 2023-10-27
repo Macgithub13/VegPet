@@ -1,12 +1,12 @@
 .cabecalho{
 
-    width:100%;
+    width:100vw;
     height:17vh;
 
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: hidden;
+    overflow-y: hidden;
 
     background: #183D0A;
 
