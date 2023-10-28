@@ -45,7 +45,7 @@ function Cadastro(){
 
                 dataFormatada=Ano+'-'+Mes+'-'+Dia
 
-                await axios.post('http://129.148.42.252:5022/cliente',{ nome: Nome,
+                await axios.post('http://129.148.42.252:3022/cliente',{ nome: Nome,
                     email: email,
                     senha: senha,
                     cpf: formatarCPF,

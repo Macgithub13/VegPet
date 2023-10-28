@@ -75,7 +75,7 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:5022/categoria/listar';
+            const url='http://129.148.42.252:3022/categoria/listar';
 
             let respAPI=await axios.get(url);
 
@@ -92,7 +92,7 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:5022/animal/listar';
+            const url='http://129.148.42.252:3022/animal/listar';
 
             let respAPI=await axios.get(url);
 
@@ -115,7 +115,7 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:5022/produto/inserir';
+            const url='http://129.148.42.252:3022/produto/inserir';
 
             let alterarCentavos=precoCentavos;
             let alterarTotal=precoTotal;
@@ -238,7 +238,7 @@ export default function CadastrarProduto(){
         
                     formData.append('imagemProduto',imagemParaInserir);
         
-                    await axios.post(`http://129.148.42.252:5022/imagem/${id}/${cont}/inserir`, formData, {
+                    await axios.post(`http://129.148.42.252:3022/imagem/${id}/${cont}/inserir`, formData, {
                     
                         headers:{
         

@@ -143,7 +143,7 @@ export default function PageConsultaClientesAdm(){
 
         try{
         
-            const url=`http://129.148.42.252:5022/cliente/adm/consulta`;
+            const url=`http://129.148.42.252:3022/cliente/adm/consulta`;
 
             let filtros={
 
