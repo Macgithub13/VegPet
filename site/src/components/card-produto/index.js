@@ -8,7 +8,7 @@ export default function cardProduto(props){
 
             <div>
 
-                <img src={'http://localhost:5000/'+props.capa} alt='' />
+                <img src={'http://129.148.42.252:5022/'+props.capa} alt='' />
 
                 <div className='desconto-estilizacao'></div>
                 <h6>{props.nome}</h6>

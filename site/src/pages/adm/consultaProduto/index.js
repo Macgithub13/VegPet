@@ -88,7 +88,7 @@ export default function PageConsultaProdutosAdm(){
          
         try{
 
-            const url='http://localhost:5000/produto/consulta/adm';
+            const url='http://129.148.42.252:5022/produto/consulta/adm';
 
             let lancamentoEspecifico=false;
             let formatarData='';
