@@ -124,7 +124,7 @@ export default function PageConsultaProdutosAdm(){
          
         try{
 
-            const url='http://localhost:5000/produto/adm/consulta';
+            const url='http://129.148.42.252:5022/produto/adm/consulta';
 
             let produtoEspecifico=true;
             let lancamentoEspecifico=false;
@@ -209,7 +209,7 @@ export default function PageConsultaProdutosAdm(){
     async function listarCategorias(){
 
         try{
-            const url=`http://localhost:5000/categoria/listar`;
+            const url=`http://129.148.42.252:5022/categoria/listar`;
 
             const resp=await axios.get(url);
 
@@ -225,7 +225,7 @@ export default function PageConsultaProdutosAdm(){
     async function listarAnimais(){
 
         try{
-            const url=`http://localhost:5000/animal/listar`;
+            const url=`http://129.148.42.252:5022/animal/listar`;
 
             const resp=await axios.get(url);
 
@@ -241,7 +241,7 @@ export default function PageConsultaProdutosAdm(){
     async function listarAdministradores(){
 
         try{
-            const url=`http://localhost:5000/adm/listar`;
+            const url=`http://129.148.42.252:5022/adm/listar`;
 
             const resp=await axios.get(url);
             

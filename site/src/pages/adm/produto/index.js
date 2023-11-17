@@ -83,7 +83,7 @@ export default function PageProdutoAdm(){
 
         try{
 
-            const url=`http://localhost:5000/produto/adm/consulta/${id}`;
+            const url=`http://129.148.42.252:5022/produto/adm/consulta/${id}`;
 
             const resp=await axios.get(url);
 
@@ -143,8 +143,8 @@ export default function PageProdutoAdm(){
 
         try{
 
-            const urlCapa=`http://localhost:5000/imagem/consulta/capa/${id}`;
-            const urlSec=`http://localhost:5000/imagem/consulta/sec/${id}`;
+            const urlCapa=`http://129.148.42.252:5022/imagem/consulta/capa/${id}`;
+            const urlSec=`http://129.148.42.252:5022/imagem/consulta/sec/${id}`;
 
             const respCapa=await axios.get(urlCapa);
             const respSec=await axios.get(urlSec);
@@ -258,7 +258,7 @@ export default function PageProdutoAdm(){
                 throw new Error('A data de lançamento não pode ser uma data que já se passou');
             }
 
-            const url=`http://localhost:5000/produto/alterar/${id}`;
+            const url=`http://129.148.42.252:5022/produto/alterar/${id}`;
 
             const produto={
 
@@ -310,7 +310,7 @@ export default function PageProdutoAdm(){
     
             formData.append('imagemProduto',imagemParaAlterar);
     
-            const url=`http://localhost:5000/imagem/alterar/capa/${id}`;
+            const url=`http://129.148.42.252:5022/imagem/alterar/capa/${id}`;
     
             await axios.put(url, formData, {
                         
@@ -350,7 +350,7 @@ export default function PageProdutoAdm(){
 
                 formData.append('imagemProduto',imagemParaAlterar);
 
-                await axios.put(`http://localhost:5000/imagem/alterar/imageSec/${id}/2`, formData, {
+                await axios.put(`http://129.148.42.252:5022/imagem/alterar/imageSec/${id}/2`, formData, {
                         
                     headers:{
 
@@ -368,7 +368,7 @@ export default function PageProdutoAdm(){
 
                 formData.append('imagemProduto',imagemParaAlterar);
 
-                await axios.put(`http://localhost:5000/imagem/alterar/imageSec/${id}/3`, formData, {
+                await axios.put(`http://129.148.42.252:5022/imagem/alterar/imageSec/${id}/3`, formData, {
                         
                     headers:{
 
@@ -386,7 +386,7 @@ export default function PageProdutoAdm(){
 
                 formData.append('imagemProduto',imagemParaAlterar);
 
-                await axios.put(`http://localhost:5000/imagem/alterar/imageSec/${id}/4`, formData, {
+                await axios.put(`http://129.148.42.252:5022/imagem/alterar/imageSec/${id}/4`, formData, {
                         
                     headers:{
 
@@ -404,7 +404,7 @@ export default function PageProdutoAdm(){
 
                 formData.append('imagemProduto',imagemParaAlterar);
 
-                await axios.put(`http://localhost:5000/imagem/alterar/imageSec/${id}/5`, formData, {
+                await axios.put(`http://129.148.42.252:5022/imagem/alterar/imageSec/${id}/5`, formData, {
                         
                     headers:{
 
@@ -423,7 +423,7 @@ export default function PageProdutoAdm(){
 
                 formData.append('imagemProduto',imagemParaAlterar);
 
-                await axios.post(`http://localhost:5000/imagem/${id}/2/inserir`, formData, {
+                await axios.post(`http://129.148.42.252:5022/imagem/${id}/2/inserir`, formData, {
                         
                     headers:{
 
@@ -441,7 +441,7 @@ export default function PageProdutoAdm(){
 
                 formData.append('imagemProduto',imagemParaAlterar);
 
-                await axios.post(`http://localhost:5000/imagem/${id}/3/inserir`, formData, {
+                await axios.post(`http://129.148.42.252:5022/imagem/${id}/3/inserir`, formData, {
                         
                     headers:{
 
@@ -459,7 +459,7 @@ export default function PageProdutoAdm(){
 
                 formData.append('imagemProduto',imagemParaAlterar);
 
-                await axios.post(`http://localhost:5000/imagem/${id}/4/inserir`, formData, {
+                await axios.post(`http://129.148.42.252:5022/imagem/${id}/4/inserir`, formData, {
                         
                     headers:{
 
@@ -477,7 +477,7 @@ export default function PageProdutoAdm(){
 
                 formData.append('imagemProduto',imagemParaAlterar);
 
-                await axios.post(`http://localhost:5000/imagem/${id}/5/inserir`, formData, {
+                await axios.post(`http://129.148.42.252:5022/imagem/${id}/5/inserir`, formData, {
                         
                     headers:{
 
@@ -506,7 +506,7 @@ export default function PageProdutoAdm(){
     async function deletarProduto(){
 
         try{
-            const url=`http://localhost:5000/produto/adm/excluir/${id}`;
+            const url=`http://129.148.42.252:5022/produto/adm/excluir/${id}`;
 
             await axios.delete(url);
 
@@ -524,28 +524,28 @@ export default function PageProdutoAdm(){
         try{
             if(excluirSec1){
 
-                const url=`http://localhost:5000/imagem/deletar/imageSec/${id}/2`;
+                const url=`http://129.148.42.252:5022/imagem/deletar/imageSec/${id}/2`;
     
                 await axios.delete(url);
             }
     
             if(excluirSec2){
     
-                const url=`http://localhost:5000/imagem/deletar/imageSec/${id}/3`;
+                const url=`http://129.148.42.252:5022/imagem/deletar/imageSec/${id}/3`;
     
                 await axios.delete(url);
             }
     
             if(excluirSec3){
     
-                const url=`http://localhost:5000/imagem/deletar/imageSec/${id}/4`;
+                const url=`http://129.148.42.252:5022/imagem/deletar/imageSec/${id}/4`;
     
                 await axios.delete(url);
             }
     
             if(excluirSec4){
     
-                const url=`http://localhost:5000/imagem/deletar/imageSec/${id}/5`;
+                const url=`http://129.148.42.252:5022/imagem/deletar/imageSec/${id}/5`;
     
                 await axios.delete(url);
             }
@@ -638,7 +638,7 @@ export default function PageProdutoAdm(){
     async function listarCategorias(){
 
         try{
-            const url=`http://localhost:5000/categoria/listar`;
+            const url=`http://129.148.42.252:5022/categoria/listar`;
 
             const resp=await axios.get(url);
 
@@ -655,7 +655,7 @@ export default function PageProdutoAdm(){
 
         try{
 
-            const url='http://localhost:5000/animal/listar';
+            const url='http://129.148.42.252:5022/animal/listar';
 
             let respAPI=await axios.get(url);
 
@@ -713,7 +713,7 @@ export default function PageProdutoAdm(){
                                 {previaCapa!=='' ?
                                     <img src={previaCapa}/>
                                 :
-                                    <img src={`http://localhost:5000/${capa}`} alt='Imagem Principal' />}
+                                    <img src={`http://129.148.42.252:5022/${capa}`} alt='Imagem Principal' />}
 
                                 <input id='alterar-capa-produto' type='file' accept='image/*' readOnly onChange={(e) => {setCapa(e.target.files[0])}}/>
 
@@ -725,7 +725,7 @@ export default function PageProdutoAdm(){
                             </label>
                         :
                         <div>
-                            <img src={`http://localhost:5000/${capa}`} alt='imagem não encontrada'/>
+                            <img src={`http://129.148.42.252:5022/${capa}`} alt='imagem não encontrada'/>
                         </div>}
                     </div>
 
@@ -751,7 +751,7 @@ export default function PageProdutoAdm(){
                                             previaSec1!=='' ?
                                                 <img src={previaSec1} alt=''/>
                                             :
-                                                <img src={`http://localhost:5000/${sec1}`} alt=''/>}
+                                                <img src={`http://129.148.42.252:5022/${sec1}`} alt=''/>}
                                         
                                         <input id='alterar-sec1' type='file' accept='image/*' readOnly onChange={(e) => {setSec1(e.target.files[0])}}/>
 
@@ -771,7 +771,7 @@ export default function PageProdutoAdm(){
                                             previaSec2!=='' ?
                                                 <img src={previaSec2} alt=''/>
                                             :
-                                                <img src={`http://localhost:5000/${sec2}`} alt=''/>}
+                                                <img src={`http://129.148.42.252:5022/${sec2}`} alt=''/>}
                                         
                                         <input id='alterar-sec2' type='file' accept='image/*' readOnly onChange={(e) => {setSec2(e.target.files[0])}}/>
 
@@ -791,7 +791,7 @@ export default function PageProdutoAdm(){
                                             previaSec3!=='' ?
                                                 <img src={previaSec3} alt=''/>
                                             :
-                                                <img src={`http://localhost:5000/${sec3}`} alt=''/>}
+                                                <img src={`http://129.148.42.252:5022/${sec3}`} alt=''/>}
                                         
                                         <input id='alterar-sec3' type='file' accept='image/*' readOnly onChange={(e) => {setSec3(e.target.files[0])}}/>
 
@@ -811,7 +811,7 @@ export default function PageProdutoAdm(){
                                             previaSec4!=='' ?
                                                 <img src={previaSec4} alt=''/>
                                             :
-                                                <img src={`http://localhost:5000/${sec4}`} alt=''/>}
+                                                <img src={`http://129.148.42.252:5022/${sec4}`} alt=''/>}
                                         
                                         <input id='alterar-sec4' type='file' accept='image/*' readOnly onChange={(e) => {setSec4(e.target.files[0])}}/>
 
@@ -827,7 +827,7 @@ export default function PageProdutoAdm(){
                                 
                                         {sec1!=='' ?
                                             <button onClick={() => {setExcluirSec1(true)}}>
-                                                <img src={`http://localhost:5000/${sec1}`}/>
+                                                <img src={`http://129.148.42.252:5022/${sec1}`}/>
 
                                                 {excluirSec1 ?
                                                     <svg width="35" height="46" viewBox="0 0 88 116" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -842,7 +842,7 @@ export default function PageProdutoAdm(){
 
                                         {sec2!=='' ?
                                             <button onClick={() => {setExcluirSec2(true)}}>
-                                                <img src={`http://localhost:5000/${sec2}`}/>
+                                                <img src={`http://129.148.42.252:5022/${sec2}`}/>
 
                                                 {excluirSec2 ?
                                                     <svg width="35" height="46" viewBox="0 0 88 116" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -857,7 +857,7 @@ export default function PageProdutoAdm(){
 
                                         {sec3!=='' ?
                                             <button onClick={() => {setExcluirSec3(true)}}>
-                                                <img src={`http://localhost:5000/${sec3}`}/>
+                                                <img src={`http://129.148.42.252:5022/${sec3}`}/>
 
                                                 {excluirSec3 ?
                                                     <svg width="35" height="46" viewBox="0 0 88 116" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -872,7 +872,7 @@ export default function PageProdutoAdm(){
 
                                         {sec4!=='' ?
                                             <button onClick={() => {setExcluirSec4(true)}}>
-                                                <img src={`http://localhost:5000/${sec4}`}/>
+                                                <img src={`http://129.148.42.252:5022/${sec4}`}/>
 
                                                 {excluirSec4 ?
                                                     <svg width="35" height="46" viewBox="0 0 88 116" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -889,7 +889,7 @@ export default function PageProdutoAdm(){
                             <div className='container-images-secs'>
                                 {infsImagesSecundariasProduto.map(item=>
                                     <div className='div-imagem-sec'> 
-                                        <img src={`http://localhost:5000/${item.Imagem}`} alt=''/>
+                                        <img src={`http://129.148.42.252:5022/${item.Imagem}`} alt=''/>
                                     </div>)}
                             </div>}
                     </div>

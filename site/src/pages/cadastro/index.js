@@ -75,7 +75,7 @@ export default function Cadastro() {
             nasc: dataFormatada
       };
 
-        let response = await axios.post('http://localhost:5000/cliente/Cadastro', dadosCliente);
+        let response = await axios.post('http://129.148.42.252:5022/cliente/Cadastro', dadosCliente);
 
         let formatarCEP=cep.replace(/\-/g, '');
 
@@ -90,7 +90,7 @@ export default function Cadastro() {
           completo: completo
         }
 
-        let cadastrarEndereco = await axios.post('http://localhost:5000/Endereco',dadosEndereco);
+        let cadastrarEndereco = await axios.post('http://129.148.42.252:5022/Endereco',dadosEndereco);
 
         // Limpar os campos de entrada ou redirecionar para outra página
         navigate('/');
