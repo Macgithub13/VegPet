@@ -2,6 +2,7 @@ import './index.scss';
 
 import Cabecalho from '../../../components/cabecalho-adm';
 import axios from 'axios';
+import storage from 'local-storage';
 
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -34,19 +35,17 @@ export default function CadastrarProduto(){
     const[categoria,setCategoria]=useState(Number(''));
     const[animal,setAnimal]=useState(Number(''));
     const[marca,setMarca]=useState('');
+    const[descricao,setDescricao]=useState('');
     const[peso,setPeso]=useState('');
 
     const[precoTotal,setPrecoTotal]=useState(undefined);
     const[precoCentavos,setPrecoCentavos]=useState(undefined);
 
-    const[estoque,setEstoque]=useState(Number());
+    const[estoque,setEstoque]=useState(Number(0));
 
     const[disponivel,setDisponivel]=useState(undefined);
     const[lancamento,setLancamento]=useState('');
     const[desconto,setDesconto]=useState(Number(0));
-
-    // Por enquanto o login não está pronto e por isso não dará para colocar o usuário logado, colocar 1 apenas para exemplo
-    const[admUser,setAdmUser]=useState(Number(1));
 
     // Variável que mostrará o erro
     const[erro,setErro]=useState('');
@@ -75,7 +74,7 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:3022/categoria/listar';
+            const url='http://localhost:5000/categoria/listar';
 
             let respAPI=await axios.get(url);
 
@@ -92,7 +91,7 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:3022/animal/listar';
+            const url='http://localhost:5000/animal/listar';
 
             let respAPI=await axios.get(url);
 
@@ -115,7 +114,9 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:3022/produto/inserir';
+            const url='http://localhost:5000/produto/inserir';
+
+            let admUser=storage('adm-logado').data.ID;
 
             let alterarCentavos=precoCentavos;
             let alterarTotal=precoTotal;
@@ -132,12 +133,21 @@ export default function CadastrarProduto(){
 
             let arrumarPreco= alterarTotal+'.'+alterarCentavos;
     
+            let hoje=new Date();
+            hoje=hoje.toISOString();
+
+            if(lancamento<hoje.substr(0,10)){
+
+                throw new Error('A data de lançamento não pode ser uma data que já se passou');
+            }
+
             let infsProduto={
     
                 nome: nome,
                 categoria:categoria,
                 animal:animal,
                 marca:marca,
+                descricao:descricao,
                 peso:peso,
                 preco:Number(arrumarPreco),
                 desconto:desconto,
@@ -238,7 +248,7 @@ export default function CadastrarProduto(){
         
                     formData.append('imagemProduto',imagemParaInserir);
         
-                    await axios.post(`http://129.148.42.252:3022/imagem/${id}/${cont}/inserir`, formData, {
+                    const resp=await axios.post(`http://localhost:5000/imagem/${id}/${cont}/inserir`, formData, {
                     
                         headers:{
         
@@ -442,9 +452,6 @@ export default function CadastrarProduto(){
                         
                         <h2>Produto</h2>
 
-                        <label for='previa-id'>ID:</label>
-                        <span id='previa-id'></span>
-
                         <label>Nome:</label>
                         <input type='text' maxLength="100" value={nome} onChange={(e) => {setNome(e.target.value)}}/>
                         
@@ -474,6 +481,9 @@ export default function CadastrarProduto(){
 
                         <label for='input-marca'>Marca do Produto:</label>
                         <input id='input-marca' type='text' maxLength="100" value={marca} onChange={(e) => {setMarca(e.target.value)}}/>
+
+                        <label for='input-desc'>Descrição do Produto:</label>
+                        <textarea id='input-desc' wrap='hard' cols="30" rows="8" maxLength='176' value={descricao} onChange={(e) => {setDescricao(e.target.value)}}></textarea>
 
                         <label for='input-peso'>Peso do Produto:</label>
                         <input id='input-peso' type='text' maxLength="5" value={peso} onChange={(e) => {setPeso(e.target.value)}}/>
