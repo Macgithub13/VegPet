@@ -34,7 +34,7 @@ export default function LoginAdm (){
 
     catch (err) {
 
-        console.log(err);
+        setErro(err.response.data.erro);
     } 
 }
     return (
