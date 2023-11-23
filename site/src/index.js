@@ -21,7 +21,7 @@ import ConsultaAdmClientes from './pages/adm/consultaCliente';
 // Importando páginas do trajanilson
 import Perfil from './pages/perfil/informacoes-de-usuario';
 import Endereco from './pages/perfil/informacoes-de-endereco';
-import Favoritos from './pages/perfil/favoritos';
+//import Favoritos from './pages/perfil/favoritos';
 import Pedidos from './pages/perfil/pedidos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -37,11 +37,9 @@ root.render(
         <Route path='/produto/cliente' exact={true} element={<ProdutoClientes/>}></Route>
         <Route path='/pagamento' exact={true} element={<Pagamento/>}></Route>
 
-
-        {/* Páginas do trajanilson */}
         <Route path='/perfil/cliente/:id' exact={true} element={<Perfil/>} ></Route>
         <Route path='/perfil/endereco/:id' element={<Endereco/>} ></Route> 
-        <Route path='/perfil/favoritos' element={<Favoritos/>}></Route> 
+        {/* <Route path='/perfil/favoritos' element={<Favoritos/>}></Route>  */}
         <Route path='perfil/pedidos' element={<Pedidos/>}></Route>
 
         <Route path='/adm' exact={true} element={<HomeAdm/>}></Route>

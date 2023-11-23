@@ -12,31 +12,6 @@ export default function Rodape(){
 
             <div className='rodape-container'>
 
-                <div className='sobre-a-empresa'>
-
-                    <h4>Sobre a Empresa</h4>
-
-                    <nav className='menu-sobre'>
-
-                        <Link>Quem somos?</Link>
-                        <Link>Trabalhe concosco</Link>
-                        <Link>Torne-se um parceiro</Link>
-                    </nav>
-                </div>
-
-                <div className='clientes'>
-
-                    <h4>Cliente</h4>
-
-                    <nav className='menu-cliente'>
-
-                        <Link>Desconto e frete grátis</Link>
-                        <Link>Entrega e devolução</Link>
-                        <Link>Dúvidas frequentes</Link>
-                        <Link>Suporte</Link>
-                    </nav>
-                </div>
-
                 <div className='container-contatos'>
 
                     <h4>Contatos</h4>

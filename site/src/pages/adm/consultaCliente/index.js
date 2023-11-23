@@ -243,7 +243,7 @@ export default function PageConsultaClientesAdm(){
 
             <CabecalhoAdm/>
 
-            <SelectionConsulta tipoConsulta='Clientes' consulta1='produtos' consulta2='pedidos'/>
+            <SelectionConsulta tipoConsulta='Clientes' consulta1='produtos'/>
 
             <section className='container-page-consulta-adm'>
 
@@ -360,26 +360,6 @@ export default function PageConsultaClientesAdm(){
                                         
                                         <option>{item.nome}</option>)}
                                 </select>
-                            </div>
-                        </div>
-
-                        <div className='filtros-especificos'>
-
-                            <h4>Filtros Específicos</h4>
-
-                            <div className='filtros-select-text'>
-                                <label for='por-ano'>Por ano de nascimento:</label>
-
-                                <div>
-
-                                    <input type='number' id='por-ano' onChange={(e) => {
-                                        setAno(e.target.value);
-                                        }}/>
-
-                                    <input type='button' value='Procurar' onClick={() => {alterarEstadoInputs(10)}}/>
-                                
-                                    <p>{erroAno}</p>
-                                </div>
                             </div>
                         </div>
                     </div>
