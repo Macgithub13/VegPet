@@ -32,7 +32,7 @@ export default function Perfil() {
 
         try {
 
-            const url = `http://localhost:5000/cliente/perfil/consulta/${id}`;
+            const url = `http://129.148.42.252:5022/cliente/perfil/consulta/${id}`;
 
             const consultarInfs = await axios.get(url, id);
 
@@ -56,7 +56,7 @@ export default function Perfil() {
 
         try {
 
-            const url = `http://localhost:5000/cliente/alterar`;
+            const url = `http://129.148.42.252:5022/cliente/alterar`;
 
             let formatarData=infNascimento.split('/');
 
