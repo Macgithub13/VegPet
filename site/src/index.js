@@ -5,7 +5,6 @@ import {BrowserRouter, Routes,Route} from 'react-router-dom';
 
 import Home from './pages/home';
 import Cadastro from './pages/cadastro';
-import Login from './pages/login';
 import Produtos from './pages/produtos';
 import ProdutoClientes from './pages/produto-cliente';
 import Pagamento from './pages/pagamento';
@@ -32,7 +31,7 @@ root.render(
 
         <Route path='/' exact={true} element={<Home/>}></Route>
         <Route path='/Cadastro' exact={true} element={<Cadastro/>}></Route>
-        <Route path='/login' exact={true} element={<Login/>}></Route>
+        {/* <Route path='/login' exact={true} element={<Login/>}></Route> */}
         <Route path='/produtos' exact={true} element={<Produtos/>}></Route>
         <Route path='/produto/cliente' exact={true} element={<ProdutoClientes/>}></Route>
         <Route path='/pagamento' exact={true} element={<Pagamento/>}></Route>
