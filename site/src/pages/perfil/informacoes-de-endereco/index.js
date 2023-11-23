@@ -74,7 +74,7 @@ export default function Endereco() {
 
             const alterar=await axios.put(url,dadosAlterarEndereco);
 
-            //window.location.reload();
+            window.location.reload();
         }
 
         catch(err){
