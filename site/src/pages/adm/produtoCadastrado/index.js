@@ -16,8 +16,7 @@ export default function PageProdutoCadastrado(){
 
         const resp=await axios.get(url);
 
-        console.log(resp.data[0].ID_PRODUTO);
-        setId(resp.data[0].ID_PRODUTO);
+        setId(resp.data.ID);
     }
 
     useEffect(() => {

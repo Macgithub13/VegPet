@@ -36,7 +36,7 @@ export default function Endereco() {
 
     async function consultarInfsEndereco(){
 
-        const url=`http://localhost:5000/endereco/perfil/consulta/${id}`;
+        const url=`http://129.148.42.252:5022/endereco/perfil/consulta/${id}`;
 
         const consulta=await axios.get(url);
 
@@ -54,7 +54,7 @@ export default function Endereco() {
 
         try{
 
-            const url=`http://localhost:5000/endereco/alterar`;
+            const url=`http://129.148.42.252:5022/endereco/alterar`;
 
             const cepFormatado=infCEP.replace(/\-/g, '');
 

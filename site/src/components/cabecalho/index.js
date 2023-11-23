@@ -21,7 +21,7 @@ export default function Cabecalho(){
     async function listarProdutosCachorro(){
 
         try{
-            const url=`http://localhost:5000/produto/consulta/header/caes`;
+            const url=`http://129.148.42.252:5022/produto/consulta/header/caes`;
 
             const resp=await axios.get(url);
 
@@ -34,7 +34,7 @@ export default function Cabecalho(){
     async function listarProdutosGato(){
 
         try{
-            const url=`http://localhost:5000/produto/consulta/header/gatos`;
+            const url=`http://129.148.42.252:5022/produto/consulta/header/gatos`;
 
             const resp=await axios.get(url);
 
@@ -47,7 +47,7 @@ export default function Cabecalho(){
     async function listarProdutosPassaro(){
 
         try{
-            const url=`http://localhost:5000/produto/consulta/header/passaros`;
+            const url=`http://129.148.42.252:5022/produto/consulta/header/passaros`;
 
             const resp=await axios.get(url);
 
@@ -60,7 +60,7 @@ export default function Cabecalho(){
     async function listarProdutosPeixe(){
 
         try{
-            const url=`http://localhost:5000/produto/consulta/header/peixes`;
+            const url=`http://129.148.42.252:5022/produto/consulta/header/peixes`;
 
             const resp=await axios.get(url);
 
@@ -73,7 +73,7 @@ export default function Cabecalho(){
     async function listarProdutosOutros(){
 
         try{
-            const url=`http://localhost:5000/produto/consulta/header/outros`;
+            const url=`http://129.148.42.252:5022/produto/consulta/header/outros`;
 
             const resp=await axios.get(url);
 
