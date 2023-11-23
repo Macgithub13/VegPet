@@ -182,7 +182,6 @@ export default function Perfil() {
                     <div className='menu'>
                         <Link className='link-p' >Informações de usuário</Link>
                         <Link to={`../../perfil/endereco/${id}`} className='link' >Informações de endereço</Link>
-                        <Link to='../../perfil/favoritos' className='link' >Favoritos</Link>
                         <button className='link' onClick={() => {setDivSair(true)}}>Sair</button>
                     </div>
                     <hr />

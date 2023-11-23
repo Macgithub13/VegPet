@@ -71,13 +71,8 @@ export default function CabecalhoAdm(){
 
                         <Link className='Link botao-historico' to='/adm/consulta/produtos'>Produtos</Link>
                         <Link className='Link botao-historico' to='/adm/consulta/clientes'>Clientes</Link>
-                        <Link className='Link botao-historico' to='/adm/consulta/pedidos'>Pedidos</Link>
                     </div>
                 </button>
-
-                <Link to='/adm/graficos' className='Link botao-menu-adm'>
-                    <span>Análise de gráficos</span>
-                </Link>
             </nav>
         </header>
     );

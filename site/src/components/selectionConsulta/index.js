@@ -22,7 +22,6 @@ export default function SelectionConsulta(props){
                     <div className='container-outras-consultas'>
 
                         <Link className='Link link-consulta' to={'/adm/consulta/'+props.consulta1}>Consultar {props.consulta1}</Link>
-                        <Link className='Link link-consulta' to={'/adm/consulta/'+props.consulta2}>Consultar {props.consulta2}</Link>
                     </div>
                 </div>
             </div>
