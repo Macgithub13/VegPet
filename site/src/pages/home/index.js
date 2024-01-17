@@ -26,7 +26,7 @@ export default function HomePage(){
 
         try{     
         
-            const url='http://129.148.42.252:5022/produto/consulta/maisVendidos';
+            const url='http://localhost:5000:5022/produto/consulta/maisVendidos';
 
             const resp=await axios.get(url);
 
@@ -39,7 +39,7 @@ export default function HomePage(){
 
         try{
 
-            const url='http://129.148.42.252:5022/produto/consulta/melhorAval';
+            const url='http://localhost:5000:5022/produto/consulta/melhorAval';
 
             const resp=await axios.get(url);
 
@@ -53,7 +53,7 @@ export default function HomePage(){
 
         try{
 
-            const url='http://129.148.42.252:5022/produto/consulta/MVCachorro';
+            const url='http://localhost:5000:5022/produto/consulta/MVCachorro';
 
             const resp=await axios.get(url);
 
@@ -67,7 +67,7 @@ export default function HomePage(){
 
         try{
 
-            const url='http://129.148.42.252:5022/produto/consulta/MVGato';
+            const url='http://localhost:5000:5022/produto/consulta/MVGato';
 
             const resp=await axios.get(url);
 

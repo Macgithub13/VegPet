@@ -28,7 +28,7 @@ export default function PageProdutos(){
 
         try{
 
-            const url=`http://129.148.42.252:5022/produto/consulta`;
+            const url=`http://localhost:5000:5022/produto/consulta`;
 
             const filtros={
 
@@ -55,7 +55,7 @@ export default function PageProdutos(){
     async function listarCategorias(){
 
         try{
-            const url=`http://129.148.42.252:5022/categoria/listar`;
+            const url=`http://localhost:5000:5022/categoria/listar`;
 
             const resp=await axios.get(url);
 
@@ -71,7 +71,7 @@ export default function PageProdutos(){
     async function listarAnimais(){
 
         try{
-            const url=`http://129.148.42.252:5022/animal/listar`;
+            const url=`http://localhost:5000:5022/animal/listar`;
 
             const resp=await axios.get(url);
 

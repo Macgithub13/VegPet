@@ -17,7 +17,7 @@ export default function LoginAdm (){
 
     try{ 
 
-      const url=`http://129.148.42.252:5022/adm/login`;
+      const url=`http://localhost:5000:5022/adm/login`;
 
       const user={
 

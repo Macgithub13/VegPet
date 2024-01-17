@@ -18,7 +18,7 @@ export default function Login() {
   async function entrarClick() {
 
     try {
-      const r = await axios.post('http://129.148.42.252:5022/usuario/login', {
+      const r = await axios.post('http://localhost:5000:5022/usuario/login', {
 
         emailCPF: emailCPF,
         senha: senha

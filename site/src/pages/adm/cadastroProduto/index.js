@@ -74,7 +74,7 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:5022/categoria/listar';
+            const url='http://localhost:5000:5022/categoria/listar';
 
             let respAPI=await axios.get(url);
 
@@ -91,7 +91,7 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:5022/animal/listar';
+            const url='http://localhost:5000:5022/animal/listar';
 
             let respAPI=await axios.get(url);
 
@@ -114,7 +114,7 @@ export default function CadastrarProduto(){
 
         try{
 
-            const url='http://129.148.42.252:5022/produto/inserir';
+            const url='http://localhost:5000:5022/produto/inserir';
 
             let admUser=storage('adm-logado').data.ID;
 
@@ -248,7 +248,7 @@ export default function CadastrarProduto(){
         
                     formData.append('imagemProduto',imagemParaInserir);
         
-                    const resp=await axios.post(`http://129.148.42.252:5022/imagem/${id}/${cont}/inserir`, formData, {
+                    const resp=await axios.post(`http://localhost:5000:5022/imagem/${id}/${cont}/inserir`, formData, {
                     
                         headers:{
         
