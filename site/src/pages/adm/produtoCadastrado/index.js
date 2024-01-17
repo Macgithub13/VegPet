@@ -13,7 +13,7 @@ export default function PageProdutoCadastrado(){
     async function consultarUltimoProduto(){
 
         const url=`http://129.148.42.252:5022/produto/ultimoProduto`;
-
+ 
         const resp=await axios.get(url);
 
         setId(resp.data.ID);
