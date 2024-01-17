@@ -74,7 +74,7 @@ export default function Endereco() {
 
             const alterar=await axios.put(url,dadosAlterarEndereco);
 
-            //window.location.reload();
+            window.location.reload();
         }
 
         catch(err){
@@ -199,7 +199,6 @@ export default function Endereco() {
                     <div className='endereco-menu'>
                         <Link to={`../../perfil/cliente/${id}`} className='link'>Informações de Usuário</Link>
                         <Link className='link-p'>Informações de Endereco</Link>
-                        <Link to="../../perfil/favoritos" className='link'>Favoritos</Link>
                         <button className='link' onClick={() => {setDivSair(true)}}>Sair</button>
                     </div>
 

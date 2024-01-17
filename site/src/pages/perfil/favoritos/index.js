@@ -19,14 +19,11 @@ export default function favoritos(){
                 <SectionDecoration/>
 
                 <div className='fav-menu'>
-                    <Link to="../../perfil" className='link'>Informações de Usuário</Link>
+                    <Link to="../../perfil/" className='link'>Informações de Usuário</Link>
                     <Link to='../../perfil/informacoes-de-endereco' className='link'>Informações de Endereco</Link>
                     <Link className='link-p'>Favoritos</Link>
-                    <Link to="../../perfil/pedidos" className='link'>Meus Pedidos</Link>
-                    <Link className='link'> Trocar de Conta</Link>
                     <Link className='link'>Sair</Link>
                 </div>
-
 
                 <div className='conteiner-lf'>
 

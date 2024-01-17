@@ -270,7 +270,7 @@ export default function PageConsultaProdutosAdm(){
 
             <CabecalhoAdm/>
 
-            <SelectionConsulta tipoConsulta='Produtos' consulta1='clientes' consulta2='pedidos'/>
+            <SelectionConsulta tipoConsulta='Produtos' consulta1='clientes'/>
 
             <section className='container-page'>
 
