@@ -12,7 +12,7 @@ export default function PageProdutoCadastrado(){
 
     async function consultarUltimoProduto(){
 
-        const url=`http://localhost:5000:5022/produto/ultimoProduto`;
+        const url=`http://localhost:5000/produto/ultimoProduto`;
  
         const resp=await axios.get(url);
 

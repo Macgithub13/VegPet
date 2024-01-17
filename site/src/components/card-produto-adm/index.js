@@ -11,7 +11,7 @@ export default function cardProduto(props){
 
                 <div className='container-infs1'>
 
-                    <img src={`http://localhost:5000:5022/${props.Capa}`}/>
+                    <img src={`http://localhost:5000/${props.Capa}`}/>
 
                     <div className='sub-container'>
 

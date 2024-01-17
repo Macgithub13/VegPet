@@ -78,7 +78,7 @@ export default function Cadastro() {
         nasc: dataFormatada
       };
 
-      const cadastroCliente = await axios.post('http://localhost:5000:5022/cliente/Cadastro', dadosCliente);
+      const cadastroCliente = await axios.post('http://localhost:5000/cliente/Cadastro', dadosCliente);
 
       let formatarCEP = cep.replace(/\-/g, '');
 
@@ -93,7 +93,7 @@ export default function Cadastro() {
         completo: completo
       }
 
-      let cadastrarEndereco = await axios.post('http://localhost:5000:5022/Endereco', dadosEndereco);
+      let cadastrarEndereco = await axios.post('http://localhost:5000/Endereco', dadosEndereco);
 
       const dadosLinkarEndereco = {
 
@@ -107,7 +107,7 @@ export default function Cadastro() {
         ID: cadastroCliente.data.insertId
       };
       
-      await axios.put('http://localhost:5000:5022/cliente/alterar', dadosLinkarEndereco);
+      await axios.put('http://localhost:5000/cliente/alterar', dadosLinkarEndereco);
 
       const infsLogin={
         ID:cadastroCliente.data.insertId,

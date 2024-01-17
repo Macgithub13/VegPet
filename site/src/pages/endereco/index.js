@@ -17,7 +17,7 @@ export default function Endereco() {
     
     try {
 
-      let dadosEndereco = ('http://localhost:5000:5022/Endereco',{
+      let dadosEndereco = ('http://localhost:5000/Endereco',{
         cep,
         rua,
         bairro,
@@ -27,7 +27,7 @@ export default function Endereco() {
         completo,
       });
       
-      const response = await axios.post('http://localhost:5000:5022/Endereco', dadosEndereco);
+      const response = await axios.post('http://localhost:5000/Endereco', dadosEndereco);
       
     
       if (response.status === 200) {
